@@ -47,11 +47,4 @@ public class PeopleController {
         return "redirect:/people";
     }
 
-//    @PostMapping()
-//    public String delete(@RequestParam("name") String name) {
-//        System.out.println(name);
-//        personDAO.delete(name);
-//        return "redirect:/people";
-//    }
-
 }
