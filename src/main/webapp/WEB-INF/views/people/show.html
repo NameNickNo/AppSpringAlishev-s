@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title> Human </title>
+</head>
+<body>
+<span style="font-size: large; color: blue; font-family: Arial,fantasy; ">
+
+    <h2>
+        <p th:text="${pers.getName()}"> </p>
+        id = <p th:text="${pers.getId()}"> </p>
+        <a href="/people"> back to People</a>
+    </h2>
+
+
+</span>
+</body>
+</html>
