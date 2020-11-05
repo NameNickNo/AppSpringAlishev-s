@@ -7,9 +7,9 @@
 <body>
     <h1> List of people
         <div th:each="person : ${people}">
-            <a th:href="@{/people/{id} (id =${person.getId()}) }" th:text="${person.getName()}" ></a>
-            <a th:href="@{/people/delete/{id} (id=${person.getId()} )}" th:text="  delete"></a>
-            <a th:href="@{/people/edit/{id} (id=${person.getId()} )}" th:text="  edit"></a>
+            <p><a th:href="@{/people/{id} (id =${person.getId()}) }" th:text="${person.getName()}" ></a>
+            <a th:href="@{/people/delete/{id} (id=${person.getId()} )}" th:text="delete"></a>
+            <a th:href="@{/people/edit/{id} (id=${person.getId()} )}" th:text="edit"></a> </p>
         </div>
     </h1>
 

@@ -58,6 +58,11 @@ public class PersonDAO {
         jdbcTemplate.update("DELETE FROM people WHERE id = ?", id);
     }
 
+    public void update(int id, Person updatedPerson) {
+        String namePerson = updatedPerson.getName();
+        jdbcTemplate.update("UPDATE people SET name= ? WHERE id = ?", namePerson, id);
+    }
+
 
     public static void resourceGet() {
         try (InputStream in = PersonDAO.class.getClassLoader()
@@ -85,5 +90,6 @@ public class PersonDAO {
         jdbcTemplate = new JdbcTemplate(dataSource);
         System.out.println("Connection with DataBase");
     }
+
 
 }
