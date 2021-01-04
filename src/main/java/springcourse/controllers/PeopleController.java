@@ -27,7 +27,7 @@ public class PeopleController {
 
     @GetMapping("/{idNumber}")
     public String show(@PathVariable("idNumber") int id, Model model) {
-        model.addAttribute("pers", personDAO.getPerson(id));
+        model.addAttribute("pers", personDAO.getPersonById(id));
         return "people/show";
     }
 
@@ -55,7 +55,7 @@ public class PeopleController {
 
     @GetMapping("/edit/{id}")
     public String editPerson(@PathVariable("id") int id, Model model) {
-        model.addAttribute("person", personDAO.getPerson(id));
+        model.addAttribute("person", personDAO.getPersonById(id));
         return "people/edit";
     }
 
